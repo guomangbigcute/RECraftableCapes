@@ -27,10 +27,12 @@ jobs:
           distribution: 'microsoft'
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
       - name: datagen
-        run: ./gradlew runDatagen --init-script init.gradle
+        run: ./gradlew runDatagen --init-script init.gradle --no-daemon
       - name: build
-        run: ./gradlew build --init-script init.gradle
+        run: ./gradlew build --init-script init.gradle --no-daemon
       - name: capture build artifacts
         if: ${{ matrix.java == '21' }} # Only upload artifacts built from latest java
         uses: actions/upload-artifact@v4
