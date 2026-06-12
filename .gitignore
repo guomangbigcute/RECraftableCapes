@@ -7,7 +7,6 @@ out/
 
 # multi-version build output
 build/multi-version/
-versions.properties
 build-all.ps1
 
 # eclipse
