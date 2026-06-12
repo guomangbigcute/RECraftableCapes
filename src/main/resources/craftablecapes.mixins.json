@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "xyz.ryhon.craftablecapes.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"PlayerEntityMixin",
+		"CapeFeatureRendererMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

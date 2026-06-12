@@ -1,0 +1,26 @@
+// Gradle 初始化脚本 - 配置国内镜像
+allprojects {
+    buildscript {
+        repositories {
+            maven { 
+                name = "AliyunCentral"
+                url = "https://maven.aliyun.com/repository/central/"
+            }
+            maven { 
+                name = "AliyunPublic"
+                url = "https://maven.aliyun.com/repository/public/"
+            }
+        }
+    }
+    
+    repositories {
+        maven { 
+            name = "AliyunCentral"
+            url = "https://maven.aliyun.com/repository/central/"
+        }
+        maven { 
+            name = "AliyunPublic"
+            url = "https://maven.aliyun.com/repository/public/"
+        }
+    }
+}
